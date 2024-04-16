@@ -1,19 +1,15 @@
-package org.black_ixx.bossshop.addon.itemshops;
+package studio.magemonkey.genesis.addon.itemshops;
+
+import org.bukkit.configuration.ConfigurationSection;
+import org.bukkit.inventory.ItemStack;
+import studio.magemonkey.genesis.managers.ClassManager;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.black_ixx.bossshop.managers.ClassManager;
-import org.black_ixx.bossshop.misc.Misc;
-import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.inventory.ItemStack;
-
 public class ItemInfo {
-
-
-    private List<String> menuitem;
-    private String[] messages;
-
+    private final List<String> menuitem;
+    private final String[]     messages;
 
     public ItemInfo(List<String> menuitem, String message) {
         this(menuitem, new String[]{message});
@@ -76,5 +72,4 @@ public class ItemInfo {
     public String getMessage(int id) {
         return messages[id];
     }
-
 }

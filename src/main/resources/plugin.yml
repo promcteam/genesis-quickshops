@@ -1,7 +1,7 @@
 name: ItemShops
 version: ${project.version}
 description: Genesis Addon - Create fancy shops with minimal effort
-authors: [Black_ixx, MageMonkeyStudios]
+authors: [Black_ixx, MageMonkeyStudio]
 website: https://magemonkey.studio
 main: studio.magemonkey.genesis.addon.itemshops.ItemShops
 depend: [Genesis]

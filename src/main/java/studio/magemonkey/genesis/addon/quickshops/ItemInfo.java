@@ -1,4 +1,4 @@
-package studio.magemonkey.genesis.addon.itemshops;
+package studio.magemonkey.genesis.addon.quickshops;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
@@ -31,19 +31,19 @@ public class ItemInfo {
         }
     }
 
-    public ItemInfo(ConfigurationSection section, String[] message_paths) {
+    public ItemInfo(ConfigurationSection section, String[] messagePaths) {
         this.menuitem = section.getStringList("MenuItem");
-        this.messages = new String[message_paths.length];
-        for (int i = 0; i < message_paths.length; i++) {
-            messages[i] = section.getString(message_paths[i]);
+        this.messages = new String[messagePaths.length];
+        for (int i = 0; i < messagePaths.length; i++) {
+            messages[i] = section.getString(messagePaths[i]);
         }
     }
 
 
-    public ItemStack getMenuItem(List<String> itemdata, ItemStack itemstack, int amount) {
-        List<String> new_list = new ArrayList<String>();
-        if (itemdata != null) {
-            for (String entry : itemdata) {
+    public ItemStack getMenuItem(List<String> itemData, ItemStack itemstack, int amount) {
+        List<String> new_list = new ArrayList<>();
+        if (itemData != null) {
+            for (String entry : itemData) {
                 new_list.add(transformEntry(entry, itemstack, amount));
             }
         }

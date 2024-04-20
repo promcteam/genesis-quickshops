@@ -1,4 +1,4 @@
-package studio.magemonkey.genesis.addon.itemshops;
+package studio.magemonkey.genesis.addon.quickshops;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -11,15 +11,15 @@ import studio.magemonkey.genesis.core.prices.GenesisPriceType;
 import studio.magemonkey.genesis.core.rewards.GenesisRewardType;
 import studio.magemonkey.genesis.managers.ClassManager;
 
-public class ItemShopsCreatorAdvanced {
-    private final String look_adv_subshop_displayname;
+public class QuickShopsCreatorAdvanced {
+    private final String lookAdvSubshopDisplayname;
 
     private final ItemInfo preview, buy, sell, sellAll, buyAll, back, close;
 
 
-    public ItemShopsCreatorAdvanced(FileConfiguration c) {
+    public QuickShopsCreatorAdvanced(FileConfiguration c) {
         ConfigurationSection shopAdvancedSubShop = c.getConfigurationSection("ShopItemLookAdvanced.SubShop");
-        look_adv_subshop_displayname = shopAdvancedSubShop.getString("Displayname");
+        lookAdvSubshopDisplayname = shopAdvancedSubShop.getString("Displayname");
 
         preview = new ItemInfo(c.getConfigurationSection("ShopItemLookAdvanced.Preview"));
         buy = new ItemInfo(c.getConfigurationSection("ShopItemLookAdvanced.Buy"));
@@ -39,7 +39,7 @@ public class ItemShopsCreatorAdvanced {
                                     double rewardMultiplier,
                                     double priceMultiplier,
                                     boolean worthIsForOneUnit) {
-        String shopName = "itemshop_advanced_" + item.getPath().toLowerCase();
+        String shopName = "quickshop_advanced_" + item.getPath().toLowerCase();
         GenesisBuy buy = new GenesisBuy(GenesisRewardType.Shop,
                 GenesisPriceType.Nothing,
                 shopName,
@@ -82,7 +82,7 @@ public class ItemShopsCreatorAdvanced {
                 true,
                 plugin,
                 ClassManager.manager.getStringManager()
-                        .transform(preview.transformEntry(look_adv_subshop_displayname.replace("%parentshopname%",
+                        .transform(preview.transformEntry(lookAdvSubshopDisplayname.replace("%parentshopname%",
                                         shop.getValidDisplayName(null, null)),
                                 item.getItemStack(),
                                 item.getItemStack().getAmount()), buy, shop, null, null),

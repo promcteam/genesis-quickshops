@@ -1,6 +1,6 @@
 v1.1.0 (Requires BossShopPro v1.9.9 or higher)
 *[NOTE] The "%id%" placeholder, used in the old default config (ShopItemLookAdvanced.SubShop.Displayname), is no longer supported.
-If you did not already change that config property, I recommend changing "&8ItemShop &8&l[right] &8%id%" into "&8%type%"
+If you did not already change that config property, I recommend changing "&8QuickShop &8&l[right] &8%id%" into "&8%type%"
 *[UPDATE] Added Spigot 1.13.* support
 *[UPDATE] Updated example shop with new material values
 *[ADD] Now it is possible to configure BuyAll and SellAll buttons separately from Buy and Sell buttons
@@ -24,7 +24,7 @@ v1.0.5
 
 
 v1.0.4
-*[FIX] When not having any other shops that use money (except ItemShops) BossShopPro did not load the money management system, causing ItemShops to break
+*[FIX] When not having any other shops that use money (except QuickShops) BossShopPro did not load the money management system, causing QuickShops to break
 
 
 v1.0.3 (Needs BossShopPro v1.2.9 or higher)

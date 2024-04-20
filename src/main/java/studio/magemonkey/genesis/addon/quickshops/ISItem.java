@@ -1,4 +1,4 @@
-package studio.magemonkey.genesis.addon.itemshops;
+package studio.magemonkey.genesis.addon.quickshops;
 
 import lombok.Getter;
 import org.bukkit.inventory.ItemStack;

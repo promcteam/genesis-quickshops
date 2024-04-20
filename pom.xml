@@ -7,9 +7,9 @@
 		<version>1.20.4-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>genesis-itemshops</artifactId>
+	<artifactId>genesis-quickshops</artifactId>
 	<version>1.0.0-R0.1-SNAPSHOT</version>
-	<name>Genesis-ItemShops</name>
+	<name>Genesis-QuickShops</name>
 	<description>Create fancy GUI shops with minimal effort.</description>
 
 	<repositories>

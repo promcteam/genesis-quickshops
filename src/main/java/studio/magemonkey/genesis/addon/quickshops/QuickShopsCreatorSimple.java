@@ -1,4 +1,4 @@
-package studio.magemonkey.genesis.addon.itemshops;
+package studio.magemonkey.genesis.addon.quickshops;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -15,10 +15,10 @@ import studio.magemonkey.genesis.inbuiltaddons.advancedshops.GenesisBuyAdvanced;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ItemShopsCreatorSimple {
+public class QuickShopsCreatorSimple {
     private final ItemInfo simple;
 
-    public ItemShopsCreatorSimple(FileConfiguration c) {
+    public QuickShopsCreatorSimple(FileConfiguration c) {
         ConfigurationSection s_simple = c.getConfigurationSection("ShopItemLookSimple");
         simple = new ItemInfo(s_simple, new String[]{"MessageBuy", "MessageSell", "MessageSellAll"});
     }

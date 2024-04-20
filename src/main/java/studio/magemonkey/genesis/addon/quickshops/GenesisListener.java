@@ -1,4 +1,4 @@
-package studio.magemonkey.genesis.addon.itemshops;
+package studio.magemonkey.genesis.addon.quickshops;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.event.EventHandler;
@@ -11,9 +11,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GenesisListener implements Listener {
-    private final ItemShops shops;
+    private final QuickShops shops;
 
-    public GenesisListener(ItemShops shops) {
+    public GenesisListener(QuickShops shops) {
         this.shops = shops;
     }
 
@@ -23,8 +23,8 @@ public class GenesisListener implements Listener {
         if (shop instanceof GenesisConfigShop) {
             GenesisConfigShop    c = (GenesisConfigShop) shop;
             ConfigurationSection s = c.getConfig();
-            if (s.contains("itemshop")) {
-                s = s.getConfigurationSection("itemshop");
+            if (s.contains("quickshop")) {
+                s = s.getConfigurationSection("quickshop");
 
                 List<ISItem> items = new ArrayList<ISItem>();
 
@@ -40,7 +40,7 @@ public class GenesisListener implements Listener {
                 }
 
                 if (!items.isEmpty()) {
-                    shops.loadItemShop(event.getShopHandler(), shop, items);
+                    shops.loadQuickShop(event.getShopHandler(), shop, items);
                 }
 
             }

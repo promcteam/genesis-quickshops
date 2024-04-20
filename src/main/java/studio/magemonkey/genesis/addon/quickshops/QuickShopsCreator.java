@@ -1,4 +1,4 @@
-package studio.magemonkey.genesis.addon.itemshops;
+package studio.magemonkey.genesis.addon.quickshops;
 
 import lombok.Getter;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -12,18 +12,18 @@ import studio.magemonkey.genesis.managers.ClassManager;
 
 import java.util.List;
 
-public class ItemShopsCreator {
+public class QuickShopsCreator {
     private final double priceMultiplier, rewardMultiplier;
     @Getter
     private final boolean advancedStyle, allowSell, allowBuy, allowBuyAll, allowSellAll, worthIsForOneUnit;
-    private final String                   currency;
-    private final ItemShopsCreatorSimple   creatorSimple;
-    private final ItemShopsCreatorAdvanced creatorAdvanced;
+    private final String                    currency;
+    private final QuickShopsCreatorSimple   creatorSimple;
+    private final QuickShopsCreatorAdvanced creatorAdvanced;
 
     private GenesisPriceType  priceType;
     private GenesisRewardType rewardType;
 
-    public ItemShopsCreator(FileConfiguration c) {
+    public QuickShopsCreator(FileConfiguration c) {
         priceMultiplier = c.getDouble("PriceMultiplier");
         rewardMultiplier = c.getDouble("RewardMultiplier");
         currency = c.getString("CurrencyType");
@@ -33,11 +33,11 @@ public class ItemShopsCreator {
         allowSellAll = c.getBoolean("AllowSellAll");
         allowBuyAll = c.getBoolean("AllowBuyAll");
         worthIsForOneUnit = c.getBoolean("WorthIsForOneUnit");
-        creatorSimple = new ItemShopsCreatorSimple(c);
-        creatorAdvanced = new ItemShopsCreatorAdvanced(c);
+        creatorSimple = new QuickShopsCreatorSimple(c);
+        creatorAdvanced = new QuickShopsCreatorAdvanced(c);
     }
 
-    public void loadItemShop(GenesisShops shopHandler, GenesisShop shop, List<ISItem> items, Genesis plugin) {
+    public void loadQuickShop(GenesisShops shopHandler, GenesisShop shop, List<ISItem> items, Genesis plugin) {
         if (priceType == null) {
             priceType = GenesisPriceType.detectType(currency);
             priceType.enableType();

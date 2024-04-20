@@ -1,10 +1,10 @@
-ShopName: ItemShop
-DisplayName: '&8ItemShop (%page%/%maxpage%)'
-Command: itemshop
+ShopName: QuickShop
+DisplayName: '&8QuickShop (%page%/%maxpage%)'
+Command: quickshop
 signs:
-  text: '[ItemShop]'
+  text: '[QuickShop]'
   NeedPermissionToCreateSign: true
-itemshop:
+quickshop:
   stone:
     Worth: 3.0
     Item:

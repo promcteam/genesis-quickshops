@@ -1,4 +1,4 @@
-package studio.magemonkey.genesis.addon.itemshops;
+package studio.magemonkey.genesis.addon.quickshops;
 
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -9,12 +9,12 @@ import studio.magemonkey.genesis.managers.config.FileHandler;
 
 import java.util.List;
 
-public class ItemShops extends GenesisAddonConfigurable {
-    private ItemShopsCreator creator;
+public class QuickShops extends GenesisAddonConfigurable {
+    private QuickShopsCreator creator;
 
     @Override
     public String getAddonName() {
-        return "ItemShops";
+        return "QuickShops";
     }
 
     @Override
@@ -33,14 +33,14 @@ public class ItemShops extends GenesisAddonConfigurable {
             new FileHandler().copyFromJar(this, "config.yml");
 
             new FileHandler().exportShops(getGenesis()); //Because shops are only imported when there is no shop folder already
-            new FileHandler().copyFromJar(this, getGenesis(), true, "ItemShopExample.yml", "ItemShopExample.yml");
+            new FileHandler().copyFromJar(this, getGenesis(), true, "QuickShopExample.yml", "QuickShopExample.yml");
         } else {
             new FileHandler().copyDefaultsFromJar(this, "config.yml");
         }
 
         reloadConfig();
         FileConfiguration c = getConfig();
-        creator = new ItemShopsCreator(c);
+        creator = new QuickShopsCreator(c);
 
     }
 
@@ -48,7 +48,7 @@ public class ItemShops extends GenesisAddonConfigurable {
     public void disableAddon() {
     }
 
-    public ItemShopsCreator getCreator() {
+    public QuickShopsCreator getCreator() {
         return creator;
     }
 
@@ -60,8 +60,8 @@ public class ItemShops extends GenesisAddonConfigurable {
     @Override
     public void genesisFinishedLoading() {}
 
-    public void loadItemShop(GenesisShops shopHandler, GenesisShop shop, List<ISItem> items) {
-        creator.loadItemShop(shopHandler, shop, items, getGenesis());
+    public void loadQuickShop(GenesisShops shopHandler, GenesisShop shop, List<ISItem> items) {
+        creator.loadQuickShop(shopHandler, shop, items, getGenesis());
     }
 
     @Override

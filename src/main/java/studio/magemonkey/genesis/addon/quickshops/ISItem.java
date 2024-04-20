@@ -12,7 +12,7 @@ import java.util.List;
 public class ISItem {
     @Getter
     private final String path;
-    private final double worth, fixSell, fixBuy;
+    private final double worth, fixBuy, fixSell;
     @Getter
     private final ItemStack itemStack;
     @Getter

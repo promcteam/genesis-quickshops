@@ -9,7 +9,7 @@ import studio.magemonkey.genesis.managers.ClassManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ISItem {
+public class QuickItem {
     @Getter
     private final String path;
     private final double worth, fixBuy, fixSell;
@@ -25,15 +25,15 @@ public class ISItem {
     @Getter
     private final List<String> itemData;
 
-    public ISItem(String path,
-                  double worth,
-                  double fixBuy,
-                  double fixSell,
-                  List<String> itemData,
-                  boolean allowSell,
-                  boolean allowBuy,
-                  boolean allowSellAll,
-                  boolean allowBuyAll) {
+    public QuickItem(String path,
+                     double worth,
+                     double fixBuy,
+                     double fixSell,
+                     List<String> itemData,
+                     boolean allowSell,
+                     boolean allowBuy,
+                     boolean allowSellAll,
+                     boolean allowBuyAll) {
         this.path = path;
         this.worth = worth;
         this.fixBuy = fixBuy;

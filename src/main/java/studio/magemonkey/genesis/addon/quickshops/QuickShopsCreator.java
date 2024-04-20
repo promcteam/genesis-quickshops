@@ -37,7 +37,7 @@ public class QuickShopsCreator {
         creatorAdvanced = new QuickShopsCreatorAdvanced(c);
     }
 
-    public void loadQuickShop(GenesisShops shopHandler, GenesisShop shop, List<ISItem> items, Genesis plugin) {
+    public void loadQuickShop(GenesisShops shopHandler, GenesisShop shop, List<QuickItem> items, Genesis plugin) {
         if (priceType == null) {
             priceType = GenesisPriceType.detectType(currency);
             priceType.enableType();
@@ -45,14 +45,14 @@ public class QuickShopsCreator {
             rewardType.enableType();
         }
 
-        for (ISItem item : items) {
+        for (QuickItem item : items) {
             GenesisBuy buy = createBuyItem(shopHandler, shop, item, plugin);
             shop.addShopItem(buy, buy.getItem(), ClassManager.manager);
         }
 
     }
 
-    private GenesisBuy createBuyItem(GenesisShops shopHandler, GenesisShop shop, ISItem item, Genesis plugin) {
+    private GenesisBuy createBuyItem(GenesisShops shopHandler, GenesisShop shop, QuickItem item, Genesis plugin) {
         if (advancedStyle) {
             return creatorAdvanced.createBuyItem(shopHandler, shop, item, plugin, rewardType, priceType,
                     rewardMultiplier,

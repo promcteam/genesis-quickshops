@@ -24,7 +24,7 @@ public class QuickShopsCreatorSimple {
     }
 
     public GenesisBuy createBuyItem(GenesisShop shop,
-                                    ISItem item,
+                                    QuickItem item,
                                     Genesis plugin,
                                     GenesisRewardType rewardType,
                                     GenesisPriceType priceType,

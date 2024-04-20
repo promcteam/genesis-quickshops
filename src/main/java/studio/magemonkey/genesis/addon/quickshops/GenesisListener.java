@@ -26,10 +26,10 @@ public class GenesisListener implements Listener {
             if (s.contains("quickshop")) {
                 s = s.getConfigurationSection("quickshop");
 
-                List<ISItem> items = new ArrayList<ISItem>();
+                List<QuickItem> items = new ArrayList<QuickItem>();
 
                 for (String key : s.getKeys(false)) {
-                    ISItem item = loadItem(s.getConfigurationSection(key),
+                    QuickItem item = loadItem(s.getConfigurationSection(key),
                             shops.getCreator().isAllowSell(),
                             shops.getCreator().isAllowBuy(),
                             shops.getCreator().isAllowSellAll(),
@@ -48,11 +48,11 @@ public class GenesisListener implements Listener {
         }
     }
 
-    private ISItem loadItem(ConfigurationSection section,
-                            boolean allowSell,
-                            boolean allowBuy,
-                            boolean allowSellAll,
-                            boolean allowBuyAll) {
+    private QuickItem loadItem(ConfigurationSection section,
+                               boolean allowSell,
+                               boolean allowBuy,
+                               boolean allowSellAll,
+                               boolean allowBuyAll) {
         if (section != null) {
             double       worth    = section.getDouble("Worth");
             double       fixBuy  = section.getDouble("PriceBuy", -1);
@@ -72,7 +72,7 @@ public class GenesisListener implements Listener {
                 allowBuyAll = section.getBoolean("AllowBuyAll");
             }
 
-            return new ISItem(section.getName(),
+            return new QuickItem(section.getName(),
                     worth,
                     fixBuy,
                     fixSell,

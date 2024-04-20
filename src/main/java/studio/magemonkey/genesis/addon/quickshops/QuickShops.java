@@ -60,7 +60,7 @@ public class QuickShops extends GenesisAddonConfigurable {
     @Override
     public void genesisFinishedLoading() {}
 
-    public void loadQuickShop(GenesisShops shopHandler, GenesisShop shop, List<ISItem> items) {
+    public void loadQuickShop(GenesisShops shopHandler, GenesisShop shop, List<QuickItem> items) {
         creator.loadQuickShop(shopHandler, shop, items, getGenesis());
     }
 

@@ -32,7 +32,7 @@ public class QuickShopsCreatorAdvanced {
 
     public GenesisBuy createBuyItem(GenesisShops shopHandler,
                                     GenesisShop shop,
-                                    ISItem item,
+                                    QuickItem item,
                                     Genesis plugin,
                                     GenesisRewardType rewardType,
                                     GenesisPriceType priceType,
@@ -68,7 +68,7 @@ public class QuickShopsCreatorAdvanced {
     public GenesisShop createSubShop(GenesisShops shopHandler,
                                      GenesisShop shop,
                                      GenesisBuy buy,
-                                     ISItem item,
+                                     QuickItem item,
                                      String shopName,
                                      Genesis plugin,
                                      GenesisRewardType rewardType,
@@ -208,7 +208,7 @@ public class QuickShopsCreatorAdvanced {
     private GenesisBuy addBuyItemBuy(GenesisShop individualShop,
                                      GenesisPriceType priceType,
                                      GenesisRewardType rewardType,
-                                     ISItem item,
+                                     QuickItem item,
                                      double priceMultiplier,
                                      int slot,
                                      int amount,
@@ -229,7 +229,7 @@ public class QuickShopsCreatorAdvanced {
     private GenesisBuy addBuyItemBuyAll(GenesisShop individual_shop,
                                         GenesisPriceType priceType,
                                         GenesisRewardType rewardType,
-                                        ISItem item,
+                                        QuickItem item,
                                         double priceMultiplier,
                                         int slot,
                                         boolean worthIsForOneUnit) {
@@ -250,7 +250,7 @@ public class QuickShopsCreatorAdvanced {
 
     private GenesisBuy addBuyItemSell(GenesisShop individual_shop,
                                       GenesisRewardType rewardType,
-                                      ISItem item,
+                                      QuickItem item,
                                       double rewardMultiplier,
                                       int slot,
                                       int amount,
@@ -270,7 +270,7 @@ public class QuickShopsCreatorAdvanced {
 
     private GenesisBuy addBuyItemSellAll(GenesisShop individual_shop,
                                          GenesisRewardType rewardType,
-                                         ISItem item,
+                                         QuickItem item,
                                          double rewardMultiplier,
                                          int slot,
                                          boolean worthIsForOneUnit) {
@@ -289,7 +289,7 @@ public class QuickShopsCreatorAdvanced {
         return shopItem;
     }
 
-    private GenesisBuy addBuyItemPreview(GenesisShop individual_shop, ISItem item, int slot, int amount) {
+    private GenesisBuy addBuyItemPreview(GenesisShop individual_shop, QuickItem item, int slot, int amount) {
         GenesisBuy shopItem = new GenesisBuy(GenesisRewardType.Nothing,
                 GenesisPriceType.Nothing,
                 null,

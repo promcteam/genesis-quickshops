@@ -8,7 +8,7 @@
     </parent>
 
     <artifactId>genesis-quickshops</artifactId>
-    <version>1.0.0-R0.2-SNAPSHOT</version>
+    <version>1.0.0-R0.3-SNAPSHOT</version>
     <name>Genesis-QuickShops</name>
     <description>Create fancy GUI shops with minimal effort.</description>
 

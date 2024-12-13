@@ -55,8 +55,8 @@ public class GenesisListener implements Listener {
                                boolean allowBuyAll) {
         if (section != null) {
             double       worth    = section.getDouble("Worth");
-            double       fixBuy  = section.getDouble("PriceBuy", -1);
-            double       fixSell = section.getDouble("RewardSell", -1);
+            double       fixBuy   = section.getDouble("PriceBuy", -1);
+            double       fixSell  = section.getDouble("RewardSell", -1);
             List<String> itemData = section.getStringList("Item");
 
             if (section.contains("AllowSell")) {

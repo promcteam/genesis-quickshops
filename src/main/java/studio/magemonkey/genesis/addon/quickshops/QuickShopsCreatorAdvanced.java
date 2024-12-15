@@ -112,6 +112,13 @@ public class QuickShopsCreatorAdvanced {
             case 64:
                 levels = new int[]{1, 8, 64};
                 break;
+            default:
+                ClassManager.manager.getBugFinder()
+                        .warn("Was not able to determine item's max stack size for " + item.getPath() + "!"
+                                + " Assuming a stack size of 1."
+                                + " Shop: " + shopName);
+                levels = new int[]{1};
+                break;
         }
 
         if (levels != null) {
